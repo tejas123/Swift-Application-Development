@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     
     func optionalBindingExample() {
         var subject = ["Maths", "Physics", "Chemistry", "English"]
-        func findSubject (data:String[], searchItem:String)-> Int? {
+        func findSubject (data:[String], searchItem:String)-> Int? {
             var indexData: Int?
             for subject in data {
                 if subject == searchItem {
@@ -74,7 +74,7 @@ class ViewController: UIViewController {
         amountAndPercentReturning.percentage
     }
     
-    func caculateTotalAndPercent (data:Int[]) -> (amount:Int, percentage:Int) {
+    func caculateTotalAndPercent (data:[Int]) -> (amount:Int, percentage:Int) {
         var totalAmt: Int = 0
         let percentAmt: Int = 10
         for amountData in data {
@@ -87,7 +87,7 @@ class ViewController: UIViewController {
 //Class Declaration
 class Mark {
     var totalMark = 0
-    func countTotalMark(mark:Int[]) {
+    func countTotalMark(mark:[Int]) {
         for markData in mark {
             totalMark += markData
         }
